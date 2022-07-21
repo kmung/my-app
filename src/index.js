@@ -5,7 +5,7 @@ import './index.css';
 class Square extends React.Component {
     constructor(props) {
         //in JS, need to always call 'super' when defining constructor of a subclass
-        //all Reach component classes that have a constructor should start with a super(props) call
+        //all React component classes that have a constructor should start with a super(props) call
         super(props);
         this.state = {
             value: null,
