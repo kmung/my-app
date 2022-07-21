@@ -47,10 +47,10 @@ import './index.css';
       super(props);
       this.state = {
         history: [{
-          squares: Array(9).fill(null),
+          squares: Array(9).fill(null)
         }],
         stepNumber: 0,
-        xIsNext: true,
+        xIsNext: true
       };
     }
 
@@ -72,7 +72,8 @@ import './index.css';
         history: history.concat([{
           squares: squares
         }]),
-        xIsNext: !this.state.xIsNext,
+        stepNumber: history.length,
+        xIsNext: !this.state.xIsNext
       });
     }
 
@@ -111,7 +112,7 @@ import './index.css';
           <div className="game-board">
             <Board 
               squares={current.squares}
-              onClick={(i) => this.handleClick(i)}
+              onClick={i => this.handleClick(i)}
             />
           </div>
           <div className="game-info">
