@@ -15,7 +15,7 @@ import './index.css';
       return (
         <Square 
           value={this.props.squares[i]} 
-          onClick={() => this.props.handleClick(i)} />
+          onClick={() => this.props.onClick(i)} />
       );
     }
   
@@ -130,7 +130,7 @@ import './index.css';
   root.render(<Game />);
 
   /*
-  * given an array of 9 saures, this function will check for a winner and return 'X',
+  * given an array of 9 squares, this function will check for a winner and return 'X',
   * 'O', or null as appropriate
   */
   function calculateWinner(squares) {
